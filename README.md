@@ -4,7 +4,7 @@ Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu 
 
 *Read this in other languages: [Indonesian](README.md), [English](README.en.md)*
 
-![](assets\foto.jpg) 
+![](https://raw.githubusercontent.com/alizhasubianto/Tugas2/main/assets/foto.jpg) 
 
 ## Pendahuluan
 
