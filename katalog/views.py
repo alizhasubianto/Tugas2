@@ -4,8 +4,8 @@ from katalog.models import CatalogItem
 def show_catalog(request):
     getCatalogs = CatalogItem.objects.all()
     context = {
-        'name' : 'Aliza',
-        'student_id' : '2106652000',
+        'Name' : 'Alizha',
+        'Student_ID' : '2106652000',
         'catalogs' : getCatalogs
     }
 
