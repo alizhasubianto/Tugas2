@@ -21,3 +21,5 @@ __Jelaskan bagaimana cara kamu mengimplementasikan poin 1 sampai dengan 4 di ata
 
 * Kemudian, yang dilakukan pertama kali saat *deployment* adalah *create new app*. Lalu setelah itu, saya menuliskan nama aplikasi yang akan di*deploy*. Pada tugas ini, saya menggunakan nama tugas2-alizha sebagai nama dari aplikasinya. Setelah aplikasi telah diberi nama, tambahkan Config Vars dengan variabel bernama HEROKU_APP_NAME dan SECRET_KEY sebagai *key*, nama aplikasi dan *key secrets*nya sebagai *value*. Selanjutnya, tambahkan *file* dpl.yml yaitu berkas yang digunakan untuk mengeksekusi *deployment* oleh *runner* di GitHub Actions. Setelah itu, hubungkan *repository-repository* yang ada di github lalu deploy dengan pilih Deploy Branch.
 
+## Link Django:
+[klik di sini](https://tugas2-alizha.herokuapp.com/katalog/)
