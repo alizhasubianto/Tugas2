@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+    {% block content %}
+
+        <h5>Nama: </h5>
+        <b>{{ Name }}</b>
+
+        <h5>NPM: </h5>
+        <b> {{ Student_ID }}</b>
+
+        <table>
+            <tr>
+                <th>Watched</th>
+                <th>Title</th>
+                <th>Rating</th>
+                <th>Release Date</th>
+                <th>Review</th>
+            </tr>
+
+            {% comment %} Tambahkan data di bawah baris ini {% endcomment %}
+            {% for film in watchlist %}
+                <tr>
+                    <th>{{film.watched}}</th>
+                    <th>{{film.title}}</th>
+                    <th>{{film.rating}}</th>
+                    <th>{{film.release_date}}</th>
+                    <th>{{film.review}}</th>
+                </tr>
+            {% endfor %}
+        </table>
+
+
+
+    {% endblock content %}

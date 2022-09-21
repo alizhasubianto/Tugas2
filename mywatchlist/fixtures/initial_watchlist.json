@@ -1,0 +1,114 @@
+[
+    {
+        "model":"mywatchlist.watchList",
+        "pk":1,
+        "fields":{
+            "watched":"Yes",
+            "title":"Extraordinary Attorney Woo",
+            "rating": "4",
+            "release_date": "June 29th 2022",
+            "review": "'Its a beautifully crafted Tv show with a gripping storyline, yet the acting is incredibly professional and realistic, depicting the notable experiences of an autistic attorney working at a major law firm in Korea whilst having to face prejudice of society.' -Janet Chuang"
+
+        }
+},
+    {
+        "model": "mywatchlist.watchList",
+        "pk": 2,
+        "fields":{
+            "watched": "Yes",
+            "title": "Twenty Five Twenty One",
+            "rating": "5",
+            "release_date": "February 12nd 2022",
+            "review": "'it was so heartwarming but also heart wrenching at the same time. A drama that reflected the face of reality so beautifully. this drama showed us the way life actually works and turns out to be, never knowing what difficulties or the happiness awaits us at the curve.' -Gudli Mohanty"
+        }
+    },
+    {
+        "model": "mywatchlist.watchList",
+        "pk": 3,
+        "fields":{
+            "watched": "Yes",
+            "title": "The Silent Sea",
+            "rating": "5",
+            "release_date": "December 24th 2021",
+            "review": "'The series ends with a lot more questions being raised, but the incomplete sensations in the series is another reason why The Silent Sea is so great and memorable' -Chris Lee"
+        }
+    },
+    {
+        "model":"mywatchlist.watchList",
+        "pk": 4,
+        "fields":{
+            "watched" : "Yes",
+            "title": "Sweet & Sour",
+            "rating": "4",
+            "release_date": "June 4th 2021",
+            "review": "'This film completely captures every emotion of 21st century dating. Based on a Japanese novel, it paints a realistic picture of the modern day love lives of millenials' -Anisha Banerjee"
+        }
+    },
+    {
+        "model": "mywatchlist.watchList",
+        "pk": 5,
+        "fields":{
+            "watched": "Yes",
+            "title": "Moriarty the Patriot",
+            "rating": "5",
+            "release_date": "October 11st 2020",
+            "review": "'Amazing, the story is so much more than good guy chasing bad guys. it's got dept and an awesome storyline you can't stop watching. 10/10 recommend and will rewatch again.' -Elizabeth Brito"
+        }
+    },
+    {
+        "model":"mywatchlist.watchList",
+        "pk": 6,
+        "fields":{
+            "watched": "Yes",
+            "title": "Big Mouth",
+            "rating": "5",
+            "release_date": "July 29th 2022",
+            "review": "'A thrilling drama with a lot of plot twist we never expected. From the first episode 'till the newly updated episode, the feeling of excitement and curiousness never faded. Truly an awesome drama with brilliant actors.' -Aught Summer"
+        }
+    },
+    {
+        "model": "mywatchlist.watchList",
+        "pk": 7,
+        "fields":{
+            "watched": "Yes",
+            "title": "Alice in Borderland",
+            "rating": "5",
+            "release_date": "December 10th 2020",
+            "review": "'Alice in Borderland was really good, the story was well written and all the different level of emotions from each of the actors was very comforting and entertaining to watch.' -Stacie"
+
+        }
+    },
+    {
+        "model": "mywatchlist.watchList",
+        "pk": 8,
+        "fields":{
+            "watched": "Yes",
+            "title": "Demon Slayer",
+            "rating": "5",
+            "release_date": "April 6th 2019",
+            "review": "'It's an amazing anime! i fell in love with this show within the first episode itself. The family theme is focused on in this show with our beloved protagonists, Tanjiro and Nezuko.' -Bhanupriya Kalita"
+        }
+    },
+    {
+        "model": "mywatchlist.watchList",
+        "pk": 9,
+        "fields":{
+            "watched": "No",
+            "title": "Emergency Declaration",
+            "rating": "4",
+            "release_date": "August 16th 2022",
+            "review": "'The movie conveys the reality of the world, but part of the world is still covered by love. it is totally underrated. You will never know what will happen next' -jeremy lee"
+        }
+    },
+    {
+        "model": "mywatchlist.watchList",
+        "pk": 10,
+        "fields":{
+            "watched": "No",
+            "title": "Akhirat: A Love Story",
+            "rating": "4",
+            "release_date": "December 2nd 2021",
+            "review": "'This movie is so good, the casts, story, OST, etc. I'ts just like a love story but it tells us that love with different religion wasn't supposed to happen.' -henggiescin"
+        }
+    }
+]
