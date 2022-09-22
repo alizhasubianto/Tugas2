@@ -8,7 +8,7 @@ __JSON (JavaScript Object Notation)__
 * lebih mudah untuk dibaca.
 * Merepresentasikan objek.
 * Dapat menyimpan data dalam bentuk array, sehingga lebih mudah dan cepat dalam melakukan transfer data.
-* tidak mendukung namespaces.
+* tidak mendukung *namespaces*.
 * keamanannya kurang bagus.
 
 __XML(Extensible Markup Languange)__
@@ -16,7 +16,7 @@ __XML(Extensible Markup Languange)__
 * Lebih sulit untuk dibaca dan diintrepretasikan.
 * Menggunakan *tag structure* untuk merepresentasikan item data.
 * tidak dapat menyimpan data dalam bentuk array.
-* mendukung namespaces.
+* mendukung *namespaces*.
 * lebih aman dibandingkan JSON
 
 __HTML(Hypertext Markup Language)__
@@ -38,7 +38,14 @@ karena *data delivery* memiliki peran penting sebagai sarana untuk mengirimkan d
 8. Menjalankan perintah `python manage.py loaddata initial_watchlist.json`
 9. Membuat fungsi `show_my_watchlist`, `show_xml`, `show_json`, `show_xml_by_id`, dan `show_json_by_id` pada views.py yang berada pada folder mywatchlist
 10. Membuat folder bernama templates di dalam folder mywatchlist, lalu saya membuat *file* bernama `mywatchlist.html` di dalam folder templates yang berisi *file* html.
-11. Membuat *file* `urls.py` pada folder mywatchlist.
+11. Membuat *file* `urls.py` pada folder mywatchlist yang berisi potongan kode sebagai berikut:
+![](mywatchlist\assets\Screenshot 2022-09-22 070421.jpg)
 12. Mendaftarkan aplikasi mywatchlist ke dalam urls.py yang ada pada folder project_django dengan menambahkan kode `path('mywatchlist/', include('mywatchlist.urls')),`
 
 # Postman
+*HTML*
+![](mywatchlist\assets\html.jpg)
+*JSON*
+![](mywatchlist\assets\json.jpg)
+*XML*
+![](mywatchlist\assets\xml.jpg)
