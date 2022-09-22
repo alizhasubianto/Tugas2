@@ -43,9 +43,9 @@ karena *data delivery* memiliki peran penting sebagai sarana untuk mengirimkan d
 12. Mendaftarkan aplikasi mywatchlist ke dalam urls.py yang ada pada folder project_django dengan menambahkan kode `path('mywatchlist/', include('mywatchlist.urls')),`
 
 # Postman
-*HTML*
+_HTML_
 ![](mywatchlist\assets\html.jpg)
-*JSON*
+_JSON_
 ![](mywatchlist\assets\json.jpg)
-*XML*
+_XML_
 ![](mywatchlist\assets\xml.jpg)
