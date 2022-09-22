@@ -1,8 +1,8 @@
 **Alizha - 2106652000 - PBP D**
 
-## TUGAS 3 PBP: Pengimplementasian Data Delivery Menggunakan Django
+# TUGAS 3 PBP: Pengimplementasian Data Delivery Menggunakan Django
 
-# Perbedaan JSON, XML, dan HTML
+## Perbedaan JSON, XML, dan HTML
 __JSON (JavaScript Object Notation)__
 * suatu format yang digunakan untuk menyimpan, membaca, dan menukar informasi dari web server yang ditulis menggunakan JavaScript sehingga informasi tersebut dapat dibaca oleh *user*.
 * lebih mudah untuk dibaca.
@@ -24,10 +24,10 @@ __HTML(Hypertext Markup Language)__
 * lebih mudah untuk dilihat, dipelajari, dan digunakan.
 * keamanannya kurang bagus
 
-# Mengapa kita memerlukan *data delivery* dalam pengimplementasian sebuah *platform*?
+## Mengapa kita memerlukan *data delivery* dalam pengimplementasian sebuah *platform*?
 karena *data delivery* memiliki peran penting sebagai sarana untuk mengirimkan data dari suatu stack ke stack lainnya pada sebuah *platform*, sehingga kita memerlukan *data delivery* dalam mengimplementasikan sebuah *platform*.
 
-# Implementasi Checklist
+## Implementasi Checklist
 1. Membuat *virtual environment* dengan menjalankan perintah `python -m venv env` pada cmd
 2. Menyalakan *virtual environtment* dengan menjalankan perintah `env\Scripts\activate.bat` pada cmd
 3. Membuat suatu aplikasi baru bernama mywatchlist dengan menjalankan perintah `python manage.py startapp mywatchlist`
@@ -42,13 +42,13 @@ karena *data delivery* memiliki peran penting sebagai sarana untuk mengirimkan d
 ![](https://raw.githubusercontent.com/alizhasubianto/Tugas2/main/mywatchlist/assets/Screenshot%202022-09-22%20070421.jpg)
 12. Mendaftarkan aplikasi mywatchlist ke dalam urls.py yang ada pada folder project_django dengan menambahkan kode `path('mywatchlist/', include('mywatchlist.urls')),`
 
-# Postman
+## Postman
 _HTML_
-![](mywatchlist\assets\html.jpg)
+![](https://raw.githubusercontent.com/alizhasubianto/Tugas2/main/mywatchlist/assets/html.jpg)
 _JSON_
-![](mywatchlist\assets\json.jpg)
+![](https://raw.githubusercontent.com/alizhasubianto/Tugas2/main/mywatchlist/assets/json.jpg)
 _XML_
-![](mywatchlist\assets\xml.jpg)
+![](https://raw.githubusercontent.com/alizhasubianto/Tugas2/main/mywatchlist/assets/xml.jpg)
 
-# Link Heroku
-[akses di sini]()
+## Link Heroku
+[akses di sini](https://tugas2-alizha.herokuapp.com/mywatchlist/)
