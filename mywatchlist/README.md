@@ -44,11 +44,11 @@ karena *data delivery* memiliki peran penting sebagai sarana untuk mengirimkan d
 
 # Postman
 _HTML_
-![](mywatchlist\assets\html.jpg)
+![](https://raw.githubusercontent.com/alizhasubianto/Tugas2/main/mywatchlist/assets/html.jpg)
 _JSON_
-![](mywatchlist\assets\json.jpg)
+![](https://raw.githubusercontent.com/alizhasubianto/Tugas2/main/mywatchlist/assets/json.jpg)
 _XML_
-![](mywatchlist\assets\xml.jpg)
+![](https://raw.githubusercontent.com/alizhasubianto/Tugas2/main/mywatchlist/assets/xml.jpg)
 
 # Link Heroku
-[akses di sini]()
+[akses di sini](https://tugas2-alizha.herokuapp.com/mywatchlist/)
