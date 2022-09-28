@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block meta %}
+<h2>Hi, {{ username }}!</h2>
+{% endblock meta %}
+
+{% block content %}  
+
+<table border= "5">
+    <tr>
+        <th>Date</th>
+        <th>Task</th>
+        <th>Description</th>
+        <th>Status</th>
+        <th colspan="4">Detail</th>
+    </tr>
+    {% comment %} Tambahkan data di bawah baris ini {% endcomment %}
+    {% for todo in to_do_list %}
+    <tr>
+        <th>{{todo.date}}</th>
+        <th>{{todo.title}}</th>
+        <th>{{todo.description}}</th>
+        {% if todo.is_finished %}
+        <th>Selesai</th>
+        {% else %}
+        <th>Belum Selesai</th>
+        {% endif %}
+        <th><button><a href="{% url 'todolist:status' todo.id %}">Change Status</a></button></th>
+        <th><button><a href="{% url 'todolist:delete' todo.id %}">Delete</a></button></th>
+    </tr>
+    {% endfor %} 
+</table>
+
+
+<br>
+<button onclick="location.href='/todolist/create-task'">Create New Task</button>
+<button><a href="{%url 'todolist:logout'%}">Logout</a></button>
+<br>
+<br>
+
+{% endblock content %}
+
+
