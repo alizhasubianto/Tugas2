@@ -34,4 +34,4 @@ urlpatterns = [
 
 
 ## Link Django
-Akses [di sini][https://tugas2-alizha.herokuapp.com/todolist/login/?next=/todolist/]
+Akses [di sini](https://tugas2-alizha.herokuapp.com/todolist/login/?next=/todolist/)
