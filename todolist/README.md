@@ -37,29 +37,29 @@ urlpatterns = [
 ## Apa perbedaan dari Inline, Internal, dan External CSS? Apa saja kelebihan dan kekurangan dari masing-masing style?
 ### Inline CSS
 Pada inline CSS, properti CSS ditulis langsung pada atribut elemen HTML.
-Kelebihan:
-* lebih mudah untuk diuji dan melihat perubahan pada suatu elemen
-* kode lebih cepat untuk diperbaiki
-* proses *loading website* lebih cepat karena proses *request* HTTP *inline* CSS lebih kecil.
-Kekurangan:
-* tidak efisien karena hanya bisa diterapkan pada satu elemen HTML.
+* Kelebihan:
+1. lebih mudah untuk diuji dan melihat perubahan pada suatu elemen
+2. kode lebih cepat untuk diperbaiki
+3. proses *loading website* lebih cepat karena proses *request* HTTP *inline* CSS lebih kecil.
+* Kekurangan:
+1. tidak efisien karena hanya bisa diterapkan pada satu elemen HTML.
 
 ### Internal CSS
 Pada Internal CSS, kode CSS ditulis di dalam blok kode tag `<style>` pada header atau bagian atas dari *file* HTML.
-- Kelebihan:
-* Karena CSS ditulis di dalam *file* HTML, jadi kita tidak perlu meng-*upload* banyak file.
-* Class dan ID *selectors* dapat digunakan di dalam *style sheet*
-- Kekurangan:
-* Internal CSS dapat menambah ukuran *file* yang dapat membuat *loading website* menjadi sedikit lebih lama.
+* Kelebihan:
+1. Karena CSS ditulis di dalam *file* HTML, jadi kita tidak perlu meng-*upload* banyak file.
+2. Class dan ID *selectors* dapat digunakan di dalam *style sheet*
+* Kekurangan:
+1. Internal CSS dapat menambah ukuran *file* yang dapat membuat *loading website* menjadi sedikit lebih lama.
 
 ### External CSS
 Pada External CSS, kode CSS ditulis secara terpisah di dalam *file* khusus dengan ekstensi `.css`. Nantinya, `file` khusus tersebut ditambahkan ke dalam *file* HTML dengan menuliskan kode `<link href = "style.css" rel = "stylesheet">`.
-- Kelebihan:
-* Struktur kode pada *file* HTML lebih jelas dan ukuran *file* bisa lebih kecil karena kode CSS ditulis secara terpisah. 
-* file CSS yang ditulis secara terpisah dapat digunakan di beberapa halaman *website* sekaligus.
-- Kekurangan:
-*Karena kode CSS ditulis secara terpisah, maka terdapat juga risiko kegagalan dalam memanggil *file* CSS. Jika *file* CSS gagal dipanggil, maka kode CSS tidak bisa diterapkan pada halaman *web* HTML.
-* Waktu *loading website* bisa lebih tinggi karena bertambahnya *file* yang harus diunggah.
+* Kelebihan:
+1. Struktur kode pada *file* HTML lebih jelas dan ukuran *file* bisa lebih kecil karena kode CSS ditulis secara terpisah. 
+2. file CSS yang ditulis secara terpisah dapat digunakan di beberapa halaman *website* sekaligus.
+* Kekurangan:
+1. Karena kode CSS ditulis secara terpisah, maka terdapat juga risiko kegagalan dalam memanggil *file* CSS. Jika *file* CSS gagal dipanggil, maka kode CSS tidak bisa diterapkan pada halaman *web* HTML.
+2. Waktu *loading website* bisa lebih tinggi karena bertambahnya *file* yang harus diunggah.
 
 ## Jelaskan tag HTML5 yang kamu ketahui.
 * `<body></body>`  : Mendefinisikan *body* dari dokumen.
