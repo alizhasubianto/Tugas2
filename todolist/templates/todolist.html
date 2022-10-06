@@ -122,7 +122,6 @@
                 <h1>Welcome, {{username}}~!👋</h1>
                 <button class="btn-1" onclick="location.href='/todolist/create-task'">Create New Task</button>
                 <button class="btn-2"><a href="{%url 'todolist:logout'%}">Logout</a></button>
-                <p></p>
                 <h6>Here's your To Do List:</h6>
                 <div class = "row text-center g-3">
                     {% for todo in to_do_list %}
