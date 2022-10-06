@@ -1,34 +1,76 @@
 {% extends 'base.html' %}
 
-{% block meta %}
-<title>Registrasi Akun</title>
-{% endblock meta %}
+{% block content %}
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Register</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel = "stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;500;600&family=Nunito:wght@400;500;600;700;900&family=Poppins:wght@400;500;600&family=Roboto+Slab:wght@400;500;600&display=swap">
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-x;
+                font-family: 'Poppins', sans-serif;
+            }
+            body{
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: linear-gradient(50deg, pink, rgb(254, 115, 138),rgb(252, 48, 82));
+            }
+            .login{
+                position: relative;
+                max-width: 900px;
+                width: 100%;
+            }
+            .login .regist_button{
+                color: white;
+                height: 55px;
+                width: 80px;
+                background:rgb(163, 39, 85);
+                border: 3px solid pink;
+                box-sizing: border-box;
+                border-radius: 10px;
+                margin: 15px 0 20px 0;
+            }
+            .regist_button:hover{
+                background: rgb(255, 69, 100);
+            }
 
-{% block content %}  
-
-<div class = "login">
+        </style>
+    </head>
+    <body>
+        <div class = "login">
     
-    <h1>Formulir Registrasi</h1>  
+            <h1>Registration Form📝</h1>  
+                <p></p>
 
-        <form method="POST" >  
-            {% csrf_token %}  
-            <table>  
-                {{ form.as_table }}  
-                <tr>  
-                    <td></td>
-                    <td><input type="submit" name="submit" value="Daftar"/></td>  
-                </tr>  
-            </table>  
-        </form>
+                <form method="POST" >  
+                    {% csrf_token %}  
+                    <table>  
+                        {{ form.as_table }}  
+                        <tr>  
+                            <td></td>
+                            <td><input class="regist_button" type="submit" name="submit" value="Sign Up"/></td>  
+                        </tr>  
+                    </table>  
+                </form>
 
-        {% if messages %}
-        <ul>
-            {% for message in messages %}
-            <li>{{ message }}</li>
-            {% endfor %}
-        </ul>
-        {% endif %}
+                {% if messages %}
+                <ul>
+                    {% for message in messages %}
+                    <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
 
-</div>  
+        </div>  
+    </body>
+    {% endblock content %}
 
-{% endblock content %}
+</html>

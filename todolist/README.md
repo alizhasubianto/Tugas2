@@ -32,6 +32,85 @@ urlpatterns = [
 ```
 9. Django di*deploy* ke heroku dan membuat dua user dengan masing-masing 3 dummy list to do.
 
+# TUGAS 5 PBP: *Web Design Using* HTML, CSS, *and* CSS *Framework*
+
+## Apa perbedaan dari Inline, Internal, dan External CSS? Apa saja kelebihan dan kekurangan dari masing-masing style?
+### Inline CSS
+Pada inline CSS, properti CSS ditulis langsung pada atribut elemen HTML.
+Kelebihan:
+* lebih mudah untuk diuji dan melihat perubahan pada suatu elemen
+* kode lebih cepat untuk diperbaiki
+* proses *loading website* lebih cepat karena proses *request* HTTP *inline* CSS lebih kecil.
+Kekurangan:
+* tidak efisien karena hanya bisa diterapkan pada satu elemen HTML.
+
+### Internal CSS
+Pada Internal CSS, kode CSS ditulis di dalam blok kode tag `<style>` pada header atau bagian atas dari *file* HTML.
+Kelebihan:
+* Karena CSS ditulis di dalam *file* HTML, jadi kita tidak perlu meng-*upload* banyak file.
+* Class dan ID *selectors* dapat digunakan di dalam *style sheet*
+Kekurangan:
+* Internal CSS dapat menambah ukuran *file* yang dapat membuat *loading website* menjadi sedikit lebih lama.
+
+### External CSS
+Pada External CSS, kode CSS ditulis secara terpisah di dalam *file* khusus dengan ekstensi `.css`. Nantinya, `file` khusus tersebut ditambahkan ke dalam *file* HTML dengan menuliskan kode `<link href = "style.css" rel = "stylesheet">`
+Kelebihan:
+* Struktur kode pada *file* HTML lebih jelas dan ukuran *file* bisa lebih kecil karena kode CSS ditulis secara terpisah. 
+* file CSS yang ditulis secara terpisah dapat digunakan di beberapa halaman *website* sekaligus.
+Kekurangan:
+*Karena kode CSS ditulis secara terpisah, maka terdapat juga risiko kegagalan dalam memanggil *file* CSS. Jika *file* CSS gagal dipanggil, maka kode CSS tidak bisa diterapkan pada halaman *web* HTML.
+* Waktu *loading website* bisa lebih tinggi karena bertambahnya *file* yang harus diunggah.
+
+## Jelaskan tag HTML5 yang kamu ketahui.
+* `<body></body>`  : Mendefinisikan *body* dari dokumen.
+* `<head></head>`  : Mendefinisikan bagian kepala dokumen yang    berisi informasi mengenai dokumen.
+* `<input></input>` : Mendefinisikan kontrol *input*.
+* `<label></label>` : Mendefinisikan label dari kontrol *input*.
+* `<p></p>`     : Mendefinisikan paragraf.
+* `<style></style>` : sebuah *tag* yang berisi informasi yang digunakan oleh bagian kepala dokumen (umumnya berisi blok kode CSS).
+* `<table></table>` : Mendefinisikan tabel data.
+* `<title></title>` : Mendefinisikan judul dari dokumen atau halaman *web*.
+* `<form></form>`  : Mendefinisikan formulir HTML untuk *user input*.
+* `<div></div>`   : Mendefinisikan *section* dalam dokumen HTML.
+
+## Jelaskan tipe-tipe CSS selector yang kamu ketahui.
+* *tag selector/type selector*: selektor yang dapat memilih elemen berdasarkan *tag* yang terdapat di dalam *file* HTML.
+Contoh:
+```
+h1{
+    font-size: 30px;
+    font-weight: 600;
+}
+```
+* *class selector*: selektor yang dapat memilih elemen berdasarkan class yang terdapat di dalam *file* HTML.
+Contoh:
+```
+.container{
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    background: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+```
+* *universal selector*: selektor yang dapat memilih berbagai tipe dari elemen atau semua elemen yang terdapat pada *file* HTML.
+Contoh:
+```
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+```
+## Implementasi *Checklist*
+1. Menambahkan barisan kode Bootstrap yang dibutuhkan pada masing-masing *file* HTML.
+2. Melakukan modifikasi *file* HTML *login*, *register*, dan *create-task* yang terdapat pada *folder* todolist menggunakan CSS berdasarkan desain halaman *website* yang diinginkan.
+3. Melakukan kustomisasi halaman utama todolist menggunakan *cards*.
+
+
+
 
 ## Link Django
 Akses [di sini](https://tugas2-alizha.herokuapp.com/todolist/login/?next=/todolist/)
