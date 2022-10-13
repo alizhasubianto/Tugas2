@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-    {% block meta %}
+{% block meta %}
     <head>
         <title>ToDoList</title>
         <meta charset="utf-8">
@@ -162,7 +162,7 @@
                 <h1>Welcome, {{username}}~!👋</h1>
                 <!---<button class="btn-1" onclick="location.href='/todolist/create-task'">Create New Task</button>>--->
                 <button type="button" class="btn-1" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Task</button>
-                <button class="btn-2"><a href="{% url'todolist:logout'%}">Logout</a></button>
+                <button class="btn-2"><a href="{% url 'todolist:logout' %}">Logout</a></button>
                 <h6>Here's your To Do List:</h6>
             </div>
             

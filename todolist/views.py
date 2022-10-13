@@ -50,8 +50,6 @@ def register(request):
     context = {'form': form}
     return render(request, 'register.html', context)
 
-@login_required(login_url='/todolist/login/')
-@csrf_exempt
 def login_user(request):
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -59,9 +57,7 @@ def login_user(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            response = HttpResponseRedirect(reverse("todolist:show_todolist"))
-            response.set_cookie('last_login', str(datetime.datetime.now()))
-            return response
+            return redirect("todolist:show_todolist")
         else:
             messages.info(request, 'Username atau Password salah!')
     context = {}
@@ -71,9 +67,7 @@ def login_user(request):
 @csrf_exempt
 def logout_user(request):
     logout(request)
-    response = HttpResponseRedirect(reverse('todolist:login'))
-    response.delete_cookie('last_login')
-    return response
+    return redirect('todolist:login')
 
 @login_required(login_url='/todolist/login/')
 @csrf_exempt
