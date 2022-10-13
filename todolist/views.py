@@ -67,6 +67,8 @@ def login_user(request):
     context = {}
     return render(request, 'login.html', context)
 
+@login_required(login_url='/todolist/login/')
+@csrf_exempt
 def logout_user(request):
     logout(request)
     response = HttpResponseRedirect(reverse('todolist:login'))

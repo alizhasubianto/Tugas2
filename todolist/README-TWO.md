@@ -19,6 +19,33 @@ Contoh penerapan:
 Saat *user* menekan tombol save pada modal pop up *add task*, *event* tersebut akan di*handle* oleh AJAX untuk mengirimkan data *task* baru yang sebelumnya ditambahkan ke *server*. Setelah data dikirim ke *server*, AJAX akan meng*update* *task* baru tersebut, sehingga *task* baru akan muncul pada halaman todolist.
 
 ## Jelaskan penerapan asynchronous programming pada AJAX.
-Melalui *browser*, AJAX akan meminta data dari *web server*, JavaScript, dan HTML DOM untuk menampilkan data, lalu data tersebut akan dikirimkan oleh AJAX menggunakan data teks, JSON, ataupun XML. Di balik layar, secara asinkronus data akan diperbarui dengan mengirimkan data ke *server* di balik layar.
+Melalui *browser*, AJAX akan meminta data dari *web server*, JavaScript, dan HTML DOM untuk menampilkan data, lalu data tersebut akan dikirimkan oleh AJAX menggunakan data teks, JSON, ataupun XML. Di balik layar, data pada halaman *web* akan diperbarui secara asinkronus dengan mengirimkan data ke *server*, artinya kita dapat memperbarui sebagian elemen data pada halaman tanpa harus me*reload* keseluruhan halaman.
 
 ## Implementasi *Checklist*
+1. Membuat *view* baru yang mengembalikan seluruh data *task* ke dalam bentuk JSON dengan membuat *function* baru yang bernama show_json_by_id dan create_task_ajax yang mengembalikan JsonResponse.
+```
+@login_required(login_url='/todolist/login/')
+@csrf_exempt
+def show_json_by_id(request):
+    data = Task.objects.filter(user=request.user).order_by('id')
+    return HttpResponse(serializers.serialize("json", data), content_type = "application/json")
+
+def create_task_ajax(request):
+    if request.method == 'POST':
+        user = request.user
+        title = request.POST['title']
+        description = request.POST['description']
+        task_item = Task.objects.create(
+            user=user, 
+            title=title, 
+            description=description
+        )
+        task_item.save()
+        return JsonResponse({"instance": "Task successfully added!"}, status=200)
+```
+2. Membuat *path* /todolist/json yang mengarah ke *view* baru dengan menambahkan *routing* `/json` dan `/add` di variabel urlpatterns di *file* urls.py yang ada di folder todolist.
+3. Membuat modal popup untuk menambahkan *task* yang terhubung dengan tombol Add Task.
+4. Menerapkan AJAX GET untuk melakukan pengambilan data *task*.
+
+## Link Heroku
+Akses [di sini](https://tugas2-alizha.herokuapp.com/todolist)
