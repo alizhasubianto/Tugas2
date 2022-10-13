@@ -8,8 +8,10 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 import datetime
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse, JsonResponse
 from django.urls import reverse
+from django.core import serializers
+from django.views.decorators.csrf import csrf_exempt
 
 @login_required(login_url='/todolist/login')
 def show_todolist(request):
@@ -21,6 +23,7 @@ def show_todolist(request):
     return render(request, "todolist.html", context)
 
 @login_required(login_url='/todolist/login/')
+@csrf_exempt
 def create_task(request):
     form = Input_Form()
 
@@ -47,6 +50,8 @@ def register(request):
     context = {'form': form}
     return render(request, 'register.html', context)
 
+@login_required(login_url='/todolist/login/')
+@csrf_exempt
 def login_user(request):
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -69,6 +74,7 @@ def logout_user(request):
     return response
 
 @login_required(login_url='/todolist/login/')
+@csrf_exempt
 def status(request, id):
     status = Task.objects.get(pk=id)
     if status.is_finished:
@@ -79,10 +85,33 @@ def status(request, id):
     return HttpResponseRedirect(reverse('todolist:show_todolist'))
 
 @login_required(login_url='/todolist/login/')
+@csrf_exempt
 def delete(request, id):
     delete = Task.objects.get(pk=id)
     delete.delete()
     return HttpResponseRedirect(reverse('todolist:show_todolist'))
+
+@login_required(login_url='/todolist/login/')
+@csrf_exempt
+def show_json_by_id(request):
+    data = Task.objects.filter(user=request.user).order_by('id')
+    return HttpResponse(serializers.serialize("json", data), content_type = "application/json")
+
+@login_required(login_url='/todolist/login/')
+@csrf_exempt
+def create_task_ajax(request):
+    if request.method == 'POST':
+        user = request.user
+        title = request.POST['title']
+        description = request.POST['description']
+        task_item = Task.objects.create(
+            user=user, 
+            title=title, 
+            description=description
+        )
+        task_item.save()
+        return JsonResponse({"instance": "Task successfully added!"}, status=200)
+
 
         
 

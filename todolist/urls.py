@@ -11,4 +11,6 @@ urlpatterns = [
     path('create-task/', create_task, name='create_task'),
     path('status/<int:id>/', status, name='status'),
     path('delete/<int:id>/', delete, name='delete'),
+    path('json/', show_json_by_id, name='show_json_by_id'),
+    path('add/', create_task_ajax, name='create_task_ajax'),
 ]
